@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Mağaza əlavə et"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/magazaAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Mağaza Ad"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/magaza_sahibi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/magaza_sahibi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Magaza Sahibinin adı"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/magaza_elaqe_nomresi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/magazaAd" />
+
+    <EditText
+        android:id="@+id/magaza_elaqe_nomresi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Mağazanın əlaqə nömrəsi"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/elave_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/magaza_sahibi" />
+
+    <Button
+        android:id="@+id/elave_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="əlavə et"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/magazalari_gor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/magaza_elaqe_nomresi" />
+
+    <Button
+        android:id="@+id/magazalari_gor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mağazaları gör"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/elave_et"
+        app:layout_constraintTop_toBottomOf="@+id/magaza_elaqe_nomresi" />
+</androidx.constraintlayout.widget.ConstraintLayout>
